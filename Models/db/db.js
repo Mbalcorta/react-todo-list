@@ -1,1 +1,5 @@
-//connect to database with pg-promise
+const pgp = require('pg-promise')()
+
+const db = pgp("postgres://localhost:5432/todolist")
+
+module.exports = db; 
