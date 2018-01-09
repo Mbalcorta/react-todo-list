@@ -1,1 +1,1 @@
-//query to insert user into database
+//add new member to database query
