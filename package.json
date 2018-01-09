@@ -33,6 +33,11 @@
     "start:dev": "nodemon dist/server/index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "create:db": "createdb todolist",
+    "drop:db": "dropdb todolist",
+    "load:db": "psql todolist < ./models/db/schema/schema.sql",
+    "seed:db" : "psql todolist < ./models/db/schema/seed.sql",
+    "init:db" : "npm run create:db && npm run load:db",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
