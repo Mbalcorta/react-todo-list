@@ -27,19 +27,24 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-runtime": "^6.20.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.12.1"
   },
   "scripts": {
-    "start:dev": "nodemon dist/server/index.js",
+    "start:dev": "export NODE_ENV=dev && nodemon dist/server/index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "createtest:db" : "createdb todolisttest",
+    "loadtest:db": "psql todolisttest < ./models/db/schema.sql",
+    "inittest:db": "npm run createtest:db && npm run loadtest:db",
     "create:db": "createdb todolist",
     "drop:db": "dropdb todolist",
     "load:db": "psql todolist < ./models/db/schema.sql",
     "seed:db": "psql todolist < ./models/db/seed.sql",
     "init:db": "npm run create:db && npm run load:db",
-    "test": "react-scripts test --env=jsdom",
+    "test": "export NODE_ENV='test' && mocha",
     "eject": "react-scripts eject"
   }
 }
