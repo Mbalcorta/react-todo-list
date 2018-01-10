@@ -8,4 +8,8 @@ const resetDB = () => {
   ).catch(console.error)
 }
 
-module.exports = { resetDB }
+const getAllData = () => {
+  return db.any('SELECT * FROM tasks')
+}
+
+module.exports = { resetDB, getAllData }
