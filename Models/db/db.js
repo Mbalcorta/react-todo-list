@@ -1,5 +1,9 @@
-const pgp = require('pg-promise')()
+const pgp = require('pg-promise')({noWarnings: true})
 
-const db = pgp("postgres://localhost:5432/todolist")
+const connection = process.env.NODE_ENV === 'test'
+? "postgres://localhost:5432/todolisttest"
+: "postgres://localhost:5432/todolist"
 
-module.exports = db; 
+const db = pgp(connection)
+
+module.exports = { db }; 
