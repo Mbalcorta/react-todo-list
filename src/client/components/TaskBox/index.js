@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TaskItem from './Task-item'
+import TaskItem from '../Task-item'
 
 class TaskBox extends Component {
   render() {
