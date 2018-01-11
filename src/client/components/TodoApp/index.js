@@ -10,7 +10,7 @@ class TodoApp extends Component {
   render() {
   return (
       <div>
-          <UserOnboarding/>        
+          {/* <UserOnboarding/>         */}
           <AddTaskBar/>        
           <TaskBoxName/>       
           <TaskBox/>
