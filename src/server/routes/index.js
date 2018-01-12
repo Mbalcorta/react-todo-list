@@ -18,4 +18,6 @@ router.use('*', (req, res) => {
   res.send(renderFullPage(html));
 });
 
+
+
 module.exports = router;
