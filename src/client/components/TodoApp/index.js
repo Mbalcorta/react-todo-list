@@ -9,11 +9,11 @@ class TodoApp extends Component {
 
   render() {
   return (
-      <div>
-          <UserOnboarding/>        
-          <AddTaskBar/>        
-          <TaskBoxName/>       
-          <TaskBox/>
+      <div className="grid">
+          <UserOnboarding />        
+          <AddTaskBar />        
+          <TaskBoxName />       
+          <TaskBox />
       </div>
     )
   }

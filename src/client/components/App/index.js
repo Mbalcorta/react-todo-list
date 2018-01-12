@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <div>
           <Switch>
-            <Route exact path="/" component={TodoApp} />
+            <Route exact path="/" component={TodoApp} />            
           </Switch>
       </div>
     );
