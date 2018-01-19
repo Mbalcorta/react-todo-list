@@ -1,14 +1,31 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class AddTaskBar extends Component {
-  render() {
-    return (
-      <div className="add-task-bar">
-          <input type="text" value="" placeholder="Add task description here"/>
-          <button name="add-task">+</button>
-      </div>  
-    )
+
+
+function AddTaskBar(props){
+  const style = {
+    AddTaskBar:{
+      height: '85px',
+      width: '600px',
+      fontFamily: 'Lucinda',
+      borderRadius: '15px 50px 15px',
+    },
+    addBtn: {
+      height:'85px',
+      width:'125px',
+      borderRadius: '15px 50px 15px',
+      marginLeft: '20px'
+    }
   }
+  
+  return (
+    <div className="add-task-bar">
+        <input type="text" value="" style={style.AddTaskBar} value={props.taskDescription}/>
+        <button name="add-task" style={style.addBtn}>+</button>
+    </div>  
+  )
 }
+
+
 
 export default AddTaskBar;

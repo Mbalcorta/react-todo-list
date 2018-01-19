@@ -13,8 +13,8 @@ function TaskItem(props) {
   )  
 }
 
-TaskItem.propTypes = {
-  taskDescription: React.PropTypes.string,
-}
+// TaskItem.propTypes = {
+//   taskDescription: React.PropTypes.string,
+// }
 
 export default TaskItem;
