@@ -14,7 +14,7 @@ function AddTaskBar(props){
       height:'100px',
       width:'100px',
       marginLeft: '25px',
-    }
+    } 
   }
   
   return (
