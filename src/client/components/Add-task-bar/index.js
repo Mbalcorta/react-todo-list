@@ -8,21 +8,20 @@ function AddTaskBar(props){
       height: '85px',
       width: '600px',
       fontFamily: 'Lucinda',
-      borderRadius: '15px 50px 15px',
+      borderRadius: '15px 45px 15px',
     },
     addBtn: {
-      height:'85px',
-      width:'125px',
-      borderRadius: '15px 50px 15px',
-      marginLeft: '20px'
+      height:'100px',
+      width:'100px',
+      marginLeft: '25px',
     }
   }
   
   return (
-    <div className="add-task-bar">
-        <input type="text" value="" style={style.AddTaskBar} value={props.taskDescription}/>
-        <button name="add-task" style={style.addBtn}>+</button>
-    </div>  
+    <div className="add-task-bar">      
+      <input type="text" style={style.AddTaskBar} value={props.taskDescription}/>
+      <input type="image" src="./icons/addTask-default.svg" name="add-task" style={style.addBtn}/>
+    </div>    
   )
 }
 
